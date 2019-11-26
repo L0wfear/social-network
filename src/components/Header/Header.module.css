@@ -1,0 +1,39 @@
+.header {
+    grid-area: h;
+    background-color: #4872a3;
+    border-radius: 5px;
+    position: relative;
+  }
+
+.logo {
+  background: url('../../logo.svg') no-repeat 50% / contain;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 8%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.loginBtn {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+  padding: 10px 20px;
+  background: rgb(69, 158, 81);
+  border-radius: 5px;
+}
+
+.logoutBtn {
+  position: absolute;
+  top: 50%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+  padding: 10px 18px;
+  background: rgb(196, 47, 97);
+  border-radius: 5px;
+}

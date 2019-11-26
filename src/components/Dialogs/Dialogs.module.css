@@ -1,0 +1,41 @@
+.messages {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    
+}
+
+.allDialogs {
+    border-right: solid 1px #e7e8ec;
+    margin-top: 15px;
+}
+
+.message {
+    margin: 15px;
+    margin-left: 5%;
+    color: #99adbb;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-row-gap: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px #e7e8ec;
+}
+
+a:last-child div.message {
+    border: none;
+}
+
+.photo {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.name {
+    color: #222;
+}
+
+.dialogs_body {
+    align-self: center;
+    justify-self: center;
+}

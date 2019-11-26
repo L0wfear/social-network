@@ -1,0 +1,11 @@
+span.errorSpan {
+    color: red;
+}
+
+.error {
+    border: 2px red solid;
+}
+
+.loginInput {
+    opacity: 1;
+}
