@@ -1,7 +1,6 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {login} from '../redux/loginReducer';
 
 const mapDispatchToProps = (state) => {
     return {
@@ -14,11 +13,11 @@ export default (Component) => {
     
         render () {
             
-            if(!this.props.isAuth) {return <Redirect to = {'/login'} />}
+            if(this.props.isAuth) {return <Redirect to = {'/profile'} />}
             return <Component {...this.props} />
         }
     }
 
-    return connect (mapDispatchToProps, {login}) (RedirectComponent);
+    return connect (mapDispatchToProps, null) (RedirectComponent);
 }
 

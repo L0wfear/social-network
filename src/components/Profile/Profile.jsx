@@ -3,16 +3,14 @@ import classes from './Profile.module.css';
 import MyPostsContainer from './MyPosts/MyPostsContainer';
 //import ProfileStatus from './Status/ProfileStatus';
 import ProfileStatusWithHooks from './Status/ProfileStatusWithHooks';
+import img from '../../img/chigurh.jpg';
 
 const Profile = (props) => {
-
+    
     return (
       <div className={classes.content}>
       <div>
-        {/* <img src='https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350' /> */}
-      </div>
-      <div>
-        <img src= {props.userInfo && props.userInfo.photos.large} alt=""/>
+        <img src= { props.userInfo && (props.userInfo.photos.large || img)} alt=""/>
       </div>
       <ProfileStatusWithHooks {...props} />
       <MyPostsContainer />

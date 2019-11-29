@@ -23,7 +23,7 @@ const Users = (props) => {
             <div className={classes.allDialogs}>
                 {props.users.map(d => <div id={d.id} key={d.id} className={classes.message} img={d.photos.small}>
                     <NavLink to={'profile/' + d.id}>
-                        <img className={classes.photo} src={d.photos.small ? d.photos.small : images[3]} alt={d.imgAlt} />
+                        <img className={classes.photo} src={d.photos.small || images[3]} alt={d.imgAlt} />
                     </NavLink>
                     <div>
                         <div className={classes.name}>{d.name}</div>
@@ -46,21 +46,3 @@ const Users = (props) => {
 }
 
 export default Users;
-
-// [
-//     {
-//         id: 1, name: 'Doctor Evil', followed: true, text: ['One million dollars'], imgAlt: 'evil',
-//         imgSrc: images[0]
-//     },
-//     {
-//         id: 2, name: 'Freddy', followed: true, text: ['I am your nightmare', 'ooo'], imgAlt: 'fire',
-//         imgSrc: images[1]
-//     },
-//     {
-//         id: 3, name: 'Jason', followed: true, text: ['You are so ugly'], imgAlt: 'friday',
-//         imgSrc: images[2]
-//     },
-//     {
-//         id: 4, name: 'Chigurh', followed: true, text: ['Cross or pile?'], imgAlt: 'pure evil',
-//         imgSrc: images[3]
-//     }]

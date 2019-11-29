@@ -4,6 +4,7 @@ import {Input} from '../Commons/FormsControl/FormsControl';
 import {required} from '../../utilits/validator';
 import { connect } from 'react-redux';
 import { login, logout } from '../../redux/loginReducer';
+import withAuthRedirect from '../../hoc/authRedirect';
 
 const Login = (props) => {
     const onSubmit = (formData) => {
@@ -15,7 +16,7 @@ const Login = (props) => {
     </div>
 }
 
-const LoginForm = (props) => {
+const LoginForm = (props) => { 
     return (
         <form onSubmit = {props.handleSubmit} >
             <div>
@@ -37,4 +38,4 @@ const LoginForm = (props) => {
 
 const LoginReduxForm = reduxForm({form: 'login'})(LoginForm);
 
-export default connect(null, {login, logout})(Login);
+export default connect(null, {login, logout})(withAuthRedirect (Login));
