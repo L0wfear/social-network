@@ -6,7 +6,8 @@ const SET_USER_LOGIN = 'SET_USER_LOGIN';
 let initialState = {
    id: null,
    email: null,
-   login: null
+   login: null,
+   isAuth: false
 };
 
 const loginReducer = (state = initialState, action) => {
@@ -27,7 +28,7 @@ export let setUserLogin = (id, email, login, isAuth = false) => {
 }
 
 export const authMe = () => (dispatch) => {
-        loginAPI.authMe()
+       return loginAPI.authMe()
             .then(data => {
                 if (data.resultCode === 0) {
                     let { id, email, login } = data.data;
