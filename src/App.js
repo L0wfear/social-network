@@ -26,8 +26,9 @@ class App extends React.Component {
     return (
       <div className='app-wrapper'>
         <HeaderContainer />
-        <Navbar />
-        <div className='wrapper_content'>
+        <div className='wrapper_container'>
+          <Navbar />
+          <div className = 'wrapper-content'>
           <Route exact path='/' render={() => <Login />} />  
           <Route path='/profile/:userID?' render={() => <ProfileContainer />} />
           <Route path='/dialogs/:userID?' render={() => <DialogsContainer />} />
@@ -35,6 +36,7 @@ class App extends React.Component {
           <Route path='/users' render={() => <UsersContainer />} />
           <Route path='/settings' render={() => <Settings />} />
           <Route path='/login' render={() => <Login />} />
+          </div>
         </div>
       </div>
     );
