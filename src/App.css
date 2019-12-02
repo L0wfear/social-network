@@ -1,3 +1,19 @@
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
 body{
   background: #edeef0;
 }
@@ -24,6 +40,7 @@ body{
 }
 
 .wrapper-content {
+  border-radius: 5px;
   grid-area: s;
   background-color: #fff;
 }

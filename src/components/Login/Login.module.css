@@ -1,11 +1,111 @@
-span.errorSpan {
-    color: red;
-}
-
-.error {
-    border: 2px red solid;
-}
-
 .loginInput {
-    opacity: 1;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+  display: block;
+  width: 80%;
+  background: #e6e6e6;
+  height: 30px;
+  border-radius: 25px;
+  padding: 0 20px;
+}
+
+.login_page {
+    display: grid;
+    grid-template-areas: 'img form';
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    padding: 100px 50px;
+}
+
+.login_page h1 {
+  margin-bottom: 20px;
+  width: 90%;
+  text-align: center;
+}
+
+.login_form_container {
+    grid-area: form;
+    width: 316px;
+    margin: auto;
+    position: relative;
+}
+
+.login_page_img {
+  grid-area: img;
+}
+
+.validate_input {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.error::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: hsl(65, 46%, 84%);
+  border: 1px solid #c80000;
+  border-radius: 13px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8%;
+  pointer-events: none;
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.error::after {
+  content: "!";
+  font-weight: bold;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 13%;
+}
+
+.error:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.login_page button{
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  width: 60%;
+  height: 40px;
+  border-radius: 25px;
+  background: #57b846;
+  transition: all 0.4s;
+  position: absolute;
+  left: 50%;
+  margin-top: 25px;
+  transform: translate(-55%);
+}
+
+.login_page button:hover {
+  background: #333333;
+}
+
+.incorrect_data {
+  position: absolute;
+  left: 50%;
+  margin-top: 50px;
+  transform: translate(-55%);
+  background-color: hsl(65, 46%, 84%);
+  border: 1px solid #c80000;
+  border-radius: 13px;
+  color: #c80000;
+  padding: 4px 10px;
 }
